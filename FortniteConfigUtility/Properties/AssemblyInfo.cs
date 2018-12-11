@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("FortniteConfigUtility")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Fortnite Config Utility")]
+[assembly: AssemblyDescription("Tool to edit Fortnite's GameUserSettings.ini config file")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("FortniteConfigUtility")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyProduct("Fortnite Config Utility")]
+[assembly: AssemblyCopyright("Copyright ©  2018 Takoid")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
