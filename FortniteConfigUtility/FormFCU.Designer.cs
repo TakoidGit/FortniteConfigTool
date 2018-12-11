@@ -164,11 +164,11 @@
             // labelCopyright
             // 
             this.labelCopyright.AutoSize = true;
-            this.labelCopyright.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCopyright.Location = new System.Drawing.Point(110, 90);
+            this.labelCopyright.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCopyright.Location = new System.Drawing.Point(117, 90);
             this.labelCopyright.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCopyright.Name = "labelCopyright";
-            this.labelCopyright.Size = new System.Drawing.Size(134, 13);
+            this.labelCopyright.Size = new System.Drawing.Size(120, 14);
             this.labelCopyright.TabIndex = 5;
             this.labelCopyright.Text = "Copyright 2018, Takoid";
             this.toolTipFooter.SetToolTip(this.labelCopyright, "Licensed under GPLv3");
@@ -203,9 +203,8 @@
             // 
             // buttonSave
             // 
-            this.buttonSave.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonSave.Font = new System.Drawing.Font("Arial", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSave.Location = new System.Drawing.Point(117, 57);
+            this.buttonSave.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSave.Location = new System.Drawing.Point(5, 57);
             this.buttonSave.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(110, 30);
@@ -218,7 +217,7 @@
             // buttonConfigDir
             // 
             this.buttonConfigDir.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonConfigDir.Location = new System.Drawing.Point(5, 57);
+            this.buttonConfigDir.Location = new System.Drawing.Point(119, 57);
             this.buttonConfigDir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonConfigDir.Name = "buttonConfigDir";
             this.buttonConfigDir.Size = new System.Drawing.Size(108, 30);
@@ -298,7 +297,7 @@
             this.Controls.Add(this.labelFPS);
             this.Controls.Add(this.labelResolution);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormFCU";

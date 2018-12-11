@@ -1,6 +1,6 @@
-﻿/* This file is part of Fortnite Config Utility.
+﻿/*  This file is part of Fortnite Config Utility.
 
-Fortnite Config Utility is free software: you can redistribute it and/or modify
+    Fortnite Config Utility is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
@@ -14,14 +14,7 @@ Fortnite Config Utility is free software: you can redistribute it and/or modify
     along with Fortnite Config Utility.  If not, see<https://www.gnu.org/licenses/>. */
 
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace fcu
@@ -158,7 +151,7 @@ namespace fcu
 
         private void buttonGitHub_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/TakoidGit/FCU");
+            System.Diagnostics.Process.Start("https://github.com/TakoidGit/FortniteConfigUtility");
         }
 
         private void buttonNVCP_Click(object sender, EventArgs e)
