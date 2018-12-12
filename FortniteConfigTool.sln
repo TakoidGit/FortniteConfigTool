@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortniteConfigTool", "FortniteConfigUtility\FortniteConfigTool.csproj", "{B4703D25-0229-4A0E-89A0-B67B3B76F514}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortniteConfigTool", "FortniteConfigTool\FortniteConfigTool.csproj", "{B4703D25-0229-4A0E-89A0-B67B3B76F514}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
