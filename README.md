@@ -29,3 +29,6 @@ This is a simple tool to easily and quickly edit Fortnite's GameUserSettings.ini
 
 * Discord: ```Takoid#3709```
   * Send me a message and I will respond as soon as I can
+
+## Download
+[Releases](https://github.com/TakoidGit/FortniteConfigTool/releases)
