@@ -11,7 +11,7 @@
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Fortnite Config Utility.  If not, see<https://www.gnu.org/licenses/>. */
+    along with Fortnite Config Utility.  If not, see https://www.gnu.org/licenses/. */
 
 using System;
 using System.IO;
@@ -57,6 +57,7 @@ namespace fcu
         private string newFullscreen;
         private bool isFullscreen;
         private bool isFPSUnlimittted;
+        private bool wasReadOnly;
 
         //get/set methods
         public int LineNumX { get => lineNumX; set => lineNumX = value; }
@@ -78,6 +79,7 @@ namespace fcu
         public string NewFullscreen { get => newFullscreen; set => newFullscreen = value; }
         public bool IsFullscreen { get => isFullscreen; set => isFullscreen = value; }
         public bool IsFPSUnlimittted { get => isFPSUnlimittted; set => isFPSUnlimittted = value; }
+        public bool WasReadOnly { get => wasReadOnly; set => wasReadOnly = value; }
 
         //constructor
         public Config()
@@ -183,7 +185,16 @@ namespace fcu
         {
             ReplaceLines();
             //write new config
+            if (configDir.IsReadOnly)
+            {
+                wasReadOnly = true;
+                configDir.IsReadOnly = false;
+            }
             File.WriteAllText(configDir.ToString(), FormatConfig(CurrentConfig));
+            if (wasReadOnly)
+            {
+                configDir.IsReadOnly = true;
+            }
         }
 
         private void ReplaceLines()

@@ -116,7 +116,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FCU-icon.ico" />
-    <Content Include="FCU.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
