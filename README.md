@@ -2,7 +2,7 @@
 
 ![Fortnite Config Tool](https://i.imgur.com/wnPzcKq.png)
 
-This is a simple tool to easily and quickly edit Fortnite's GameUserSettings.ini.
+This is a simple tool to quickly and easily edit Fortnite's GameUserSettings.ini.
 
 *You still have to configure the custom resolution on your PC. This can be done via NVIDIA/AMD Control Panel or by following along with this [YouTube tutorial](https://www.youtube.com/watch?v=YO4a-yV073o)*
 
