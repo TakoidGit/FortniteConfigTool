@@ -58,6 +58,8 @@ namespace fct
         private bool isFullscreen;
         private bool isFPSUnlimittted;
         private bool wasReadOnly;
+        private StringBuilder successMessage;
+        private string[] newConfig;
 
         //get/set methods
         public int LineNumX { get => lineNumX; set => lineNumX = value; }
@@ -69,6 +71,7 @@ namespace fct
         public int LineNumPreferredFullscreen { get => lineNumPreferredFullscreen; set => lineNumPreferredFullscreen = value; }
         public int LineNumFullscreen { get => lineNumFullscreen; set => lineNumFullscreen = value; }
         public string[] CurrentConfig { get => currentConfig; set => currentConfig = value; }
+        public string[] NewConfig { get => newConfig; set => newConfig = value; }
         public string CurrentResX { get => currentResX; set => currentResX = value; }
         public string CurrentResY { get => currentResY; set => currentResY = value; }
         public string CurrentFPS { get => currentFPS; set => currentFPS = value; }
@@ -80,6 +83,7 @@ namespace fct
         public bool IsFullscreen { get => isFullscreen; set => isFullscreen = value; }
         public bool IsFPSUnlimittted { get => isFPSUnlimittted; set => isFPSUnlimittted = value; }
         public bool WasReadOnly { get => wasReadOnly; set => wasReadOnly = value; }
+        public StringBuilder SuccessMessage { get => successMessage; set => successMessage = value; }
 
         //constructor
         public Config()
@@ -183,48 +187,59 @@ namespace fct
         //write config
         public void WriteConfig()
         {
-            ReplaceLines();
             //write new config
             if (configDir.IsReadOnly)
             {
                 wasReadOnly = true;
                 configDir.IsReadOnly = false;
             }
-            File.WriteAllText(configDir.ToString(), FormatConfig(CurrentConfig));
+            File.WriteAllText(configDir.ToString(), FormatConfig(NewConfig));
             if (wasReadOnly)
             {
                 configDir.IsReadOnly = true;
             }
         }
 
-        private void ReplaceLines()
+        public void ReplaceLines()
         {
+            SuccessMessage = new StringBuilder();
+                
+            NewConfig = new string[CurrentConfig.Length];
+            CurrentConfig.CopyTo(NewConfig, 0);
+
             //replace lines at linenum index with their updated values
-            CurrentConfig[LineNumX] = triggerX + NewX;
-            CurrentConfig[LineNumY] = triggerY + NewY;
-            CurrentConfig[LineNumConfirmedX] = triggerConfirmedX + NewX;
-            CurrentConfig[LineNumConfirmedY] = triggerConfirmedY + NewY;
+            NewConfig[LineNumX] = triggerX + NewX;
+            NewConfig[LineNumY] = triggerY + NewY;
+            NewConfig[LineNumConfirmedX] = triggerConfirmedX + NewX;
+            NewConfig[LineNumConfirmedY] = triggerConfirmedY + NewY;
+
+            SuccessMessage.Append("Resolution: " + NewX + "x" + NewY);
+            
 
             if (IsFPSUnlimittted)
             {
-                CurrentConfig[LineNumFPS] = triggerFPS + "0.000000";
+                NewConfig[LineNumFPS] = triggerFPS + "0.000000";
+                SuccessMessage.Append(Environment.NewLine + "FPS Uncapped");
             }
             else
             {
-                CurrentConfig[LineNumFPS] = triggerFPS + NewFPS + ".000000";
+                NewConfig[LineNumFPS] = triggerFPS + NewFPS + ".000000";
+                SuccessMessage.Append(Environment.NewLine + "FPS: " + NewFPS);
             }
 
             if (IsFullscreen)
             {
-                CurrentConfig[LineNumPreferredFullscreen] = triggerPreferredFullscreen + "0";
-                CurrentConfig[LineNumConfirmedFullscreen] = triggerConfirmedFullscreen + "0";
-                CurrentConfig[LineNumFullscreen] = triggerFullscreen + "0";
+                NewConfig[LineNumPreferredFullscreen] = triggerPreferredFullscreen + "0";
+                NewConfig[LineNumConfirmedFullscreen] = triggerConfirmedFullscreen + "0";
+                NewConfig[LineNumFullscreen] = triggerFullscreen + "0";
+                SuccessMessage.Append(Environment.NewLine + "Fullscreen On");
             }
             else
             {
-                CurrentConfig[LineNumPreferredFullscreen] = triggerPreferredFullscreen + "1";
-                CurrentConfig[LineNumConfirmedFullscreen] = triggerConfirmedFullscreen + "1";
-                CurrentConfig[LineNumFullscreen] = triggerFullscreen + "1";
+                NewConfig[LineNumPreferredFullscreen] = triggerPreferredFullscreen + "1";
+                NewConfig[LineNumConfirmedFullscreen] = triggerConfirmedFullscreen + "1";
+                NewConfig[LineNumFullscreen] = triggerFullscreen + "1";
+                SuccessMessage.Append(Environment.NewLine + "Fullscreen Off");
             }
 
         }

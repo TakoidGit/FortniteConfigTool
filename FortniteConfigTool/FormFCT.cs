@@ -116,7 +116,15 @@ namespace fct
                 config.NewFPS = numericUpDownFPS.Value.ToString();
             }
 
-            config.WriteConfig();
+            config.ReplaceLines();
+
+            DialogResult result = MessageBox.Show(config.SuccessMessage.ToString(), "New Config", MessageBoxButtons.OKCancel);
+
+            if(result == DialogResult.OK)
+            {
+                config.WriteConfig();
+            }
+                    
         }
 
         private void checkBoxFullscreen_CheckedChanged(object sender, EventArgs e)

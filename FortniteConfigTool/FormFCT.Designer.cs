@@ -74,7 +74,7 @@
             this.labelFPS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFPS.Name = "labelFPS";
             this.labelFPS.Size = new System.Drawing.Size(60, 18);
-            this.labelFPS.TabIndex = 1;
+            this.labelFPS.TabIndex = 0;
             this.labelFPS.Text = "FPS Cap:";
             // 
             // numericUpDownResY
@@ -174,7 +174,7 @@
             this.labelCopyright.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCopyright.Name = "labelCopyright";
             this.labelCopyright.Size = new System.Drawing.Size(103, 14);
-            this.labelCopyright.TabIndex = 5;
+            this.labelCopyright.TabIndex = 0;
             this.labelCopyright.Text = "Created by Takoid";
             this.toolTipFooter.SetToolTip(this.labelCopyright, "Licensed under GPLv3");
             // 
@@ -214,7 +214,7 @@
             this.buttonSave.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(95, 28);
-            this.buttonSave.TabIndex = 8;
+            this.buttonSave.TabIndex = 7;
             this.buttonSave.Text = "Save Config";
             this.toolTipButtons.SetToolTip(this.buttonSave, "Save changes to config");
             this.buttonSave.UseVisualStyleBackColor = true;
@@ -227,7 +227,7 @@
             this.buttonConfigDir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonConfigDir.Name = "buttonConfigDir";
             this.buttonConfigDir.Size = new System.Drawing.Size(121, 28);
-            this.buttonConfigDir.TabIndex = 7;
+            this.buttonConfigDir.TabIndex = 8;
             this.buttonConfigDir.Text = "Config Directory";
             this.toolTipButtons.SetToolTip(this.buttonConfigDir, "Open the config directory");
             this.buttonConfigDir.UseVisualStyleBackColor = true;
@@ -254,7 +254,7 @@
             this.labelX.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelX.Name = "labelX";
             this.labelX.Size = new System.Drawing.Size(15, 18);
-            this.labelX.TabIndex = 13;
+            this.labelX.TabIndex = 0;
             this.labelX.Text = "x";
             // 
             // checkBoxBackup
@@ -293,7 +293,7 @@
             this.labelVersion.Location = new System.Drawing.Point(0, 98);
             this.labelVersion.Name = "labelVersion";
             this.labelVersion.Size = new System.Drawing.Size(40, 15);
-            this.labelVersion.TabIndex = 14;
+            this.labelVersion.TabIndex = 0;
             this.labelVersion.Text = "v1.0.3";
             this.toolTipFooter.SetToolTip(this.labelVersion, "Check GitHub for updates");
             // 
