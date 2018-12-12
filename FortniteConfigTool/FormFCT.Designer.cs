@@ -170,12 +170,12 @@
             this.labelCopyright.AutoSize = true;
             this.labelCopyright.BackColor = System.Drawing.Color.Gray;
             this.labelCopyright.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCopyright.Location = new System.Drawing.Point(224, 99);
+            this.labelCopyright.Location = new System.Drawing.Point(247, 99);
             this.labelCopyright.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCopyright.Name = "labelCopyright";
-            this.labelCopyright.Size = new System.Drawing.Size(126, 14);
+            this.labelCopyright.Size = new System.Drawing.Size(103, 14);
             this.labelCopyright.TabIndex = 5;
-            this.labelCopyright.Text = "Copyright 2018, Takoid";
+            this.labelCopyright.Text = "Created by Takoid";
             this.toolTipFooter.SetToolTip(this.labelCopyright, "Licensed under GPLv3");
             // 
             // checkBoxFullscreen
