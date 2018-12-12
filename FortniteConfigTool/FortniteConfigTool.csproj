@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B4703D25-0229-4A0E-89A0-B67B3B76F514}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>fcu</RootNamespace>
-    <AssemblyName>Fortnite Config Utility</AssemblyName>
+    <RootNamespace>fct</RootNamespace>
+    <AssemblyName>Fortnite Config Tool</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,6 +46,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <NoWin32Manifest>true</NoWin32Manifest>
