@@ -1,6 +1,6 @@
 # Fortnite Config Tool
 
-![Fortnite Config Tool](https://i.imgur.com/wnPzcKq.png)
+![Fortnite Config Tool](https://i.imgur.com/Hied70y.png)
 
 This is a simple tool to quickly and easily edit Fortnite's GameUserSettings.ini.
 
