@@ -17,13 +17,13 @@ using System;
 using System.IO;
 using System.Windows.Forms;
 
-namespace fcu
+namespace fct
 {
-    public partial class FormFCU : Form
+    public partial class FormFCT : Form
     {
         private Config config;
 
-        public FormFCU()
+        public FormFCT()
         {
             InitializeComponent();
         }
@@ -151,7 +151,7 @@ namespace fcu
 
         private void buttonGitHub_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/TakoidGit/FortniteConfigUtility");
+            System.Diagnostics.Process.Start("https://github.com/TakoidGit/FortniteConfigTool/");
         }
 
         private void buttonNVCP_Click(object sender, EventArgs e)
@@ -165,6 +165,11 @@ namespace fcu
                 toolTipButtons.SetToolTip(buttonNVCP, "NVIDIA Control Panel Unavailable");
                 Console.WriteLine(ex);
             }
+        }
+
+        private void checkBoxBackup_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -51,7 +51,7 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>FCU-icon.ico</ApplicationIcon>
+    <ApplicationIcon>FCT-icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -68,16 +68,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
-    <Compile Include="FormFCU.cs">
+    <Compile Include="FormFCT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormFCU.Designer.cs">
-      <DependentUpon>FormFCU.cs</DependentUpon>
+    <Compile Include="FormFCT.Designer.cs">
+      <DependentUpon>FormFCT.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormFCU.resx">
-      <DependentUpon>FormFCU.cs</DependentUpon>
+    <EmbeddedResource Include="FormFCT.resx">
+      <DependentUpon>FormFCT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -115,7 +115,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FCU-icon.ico" />
+    <Content Include="FCT-icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
