@@ -1,9 +1,13 @@
 # Fortnite Config Tool
+
+![Fortnite Config Tool](https://i.imgur.com/wnPzcKq.png)
+
 This is a simple tool to easily and quickly edit Fortnite's GameUserSettings.ini.
 
 *You still have to configure the custom resolution on your PC. This can be done via NVIDIA/AMD Control Panel or by following along with this [YouTube tutorial](https://www.youtube.com/watch?v=YO4a-yV073o)*
 
-**Features**:
+## Features
+
 * Custom resolution
 * Custom FPS cap
 * Fullscreen toggle
@@ -21,6 +25,7 @@ This is a simple tool to easily and quickly edit Fortnite's GameUserSettings.ini
   * This button only applies to NVIDIA users
   * If someone with an AMD GPU would like to help me make this button dynamic based on user's GPU, please add my Discord below
   
-**Support**:
+## Support
+
 * Discord: ```Takoid#3709```
   * Send me a message and I will respond as soon as I can
