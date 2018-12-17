@@ -213,8 +213,7 @@ namespace fct
             NewConfig[LineNumConfirmedX] = triggerConfirmedX + NewX;
             NewConfig[LineNumConfirmedY] = triggerConfirmedY + NewY;
 
-            SuccessMessage.Append("Resolution: " + NewX + "x" + NewY);
-            
+            SuccessMessage.Append("Resolution: " + NewX + "x" + NewY);            
 
             if (IsFPSUnlimittted)
             {
@@ -223,7 +222,7 @@ namespace fct
             }
             else
             {
-                NewConfig[LineNumFPS] = triggerFPS + NewFPS + ".000000";
+                NewConfig[LineNumFPS] = triggerFPS + NewFPS;
                 SuccessMessage.Append(Environment.NewLine + "FPS: " + NewFPS);
             }
 
