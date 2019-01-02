@@ -2,13 +2,13 @@
 
 ![Fortnite Config Tool](https://i.imgur.com/Rkylkac.png)
 
-**Some scientists say stretching your Fortnite resolution can cause an increase in persperation while playing Fortnite.**
-
-**Please stay hydrated while you sweat.**
-
 This is a simple tool to quickly and easily edit Fortnite's GameUserSettings.ini. Fortnite's in-game options are quite limited which makes custom resolutions and specific FPS limits impossible to achieve.
 
 *You still have to configure the custom resolution on your PC. This can be done via NVIDIA/AMD Control Panel or by following along with this [YouTube tutorial](https://www.youtube.com/watch?v=YO4a-yV073o).*
+
+**Some scientists say stretching your Fortnite resolution can cause an increase in persperation while playing Fortnite.**
+
+**Please stay hydrated while you sweat.**
 
 ## Features
 
