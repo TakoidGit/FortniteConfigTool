@@ -294,7 +294,7 @@
             this.labelVersion.Name = "labelVersion";
             this.labelVersion.Size = new System.Drawing.Size(40, 15);
             this.labelVersion.TabIndex = 0;
-            this.labelVersion.Text = "v1.0.3";
+            this.labelVersion.Text = "v1.0.4";
             this.toolTipFooter.SetToolTip(this.labelVersion, "Check GitHub for updates");
             // 
             // FormFCT
