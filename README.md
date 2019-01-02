@@ -12,9 +12,11 @@ This is a simple tool to quickly and easily edit Fortnite's GameUserSettings.ini
 
 ## Features
 
-* Lightweight (less than 250kb decompressed)
 * Set custom resolutions now possible via the in-game menu
 * Set FPS limit to any value
+* Lightweight & Fast
+  * Less than 250kb decompressed
+  * Programmed in native C# with no unnecessary plugins/frameworks
 * Fullscreen toggle
   * Must be enabled to enter a custom resolution (custom resolutions do not work outside of fullscreen mode)
 * Uncapped FPS toggle
