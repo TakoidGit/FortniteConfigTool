@@ -8,17 +8,19 @@ This is a simple tool to quickly and easily edit Fortnite's GameUserSettings.ini
 
 ## Features
 
-* Custom resolution
-* Custom FPS cap
+* Lightweight (less than 250kb decompressed)
+* Set custom resolutions now possible via the in-game menu
+* Set FPS limit to any value
 * Fullscreen toggle
-  * Must be enabled to enter a custom resolution
+  * Must be enabled to enter a custom resolution (custom resolutions do not work outside of fullscreen mode)
 * Uncapped FPS toggle
   * Must be disabled to enter a custom FPS cap
-* Backup option
-  * Creates a GameUserSettings.old file in the config's directory, enabled by default
-* Reads current config file and loads current values on launch
+* Backup option (enabled by default)
+  * Creates a GameUserSettings.old file in the config's directory
+* Loads current config values on launch
 * Dynamic read-only handling
   * Read-only attribute disabled before writing new config and re-enabled afterwards (only if it was before)
+  * There should be no reason to set config as read-only but this was the best way to handle all possible scenarios
 * Button to open your config directory
 * Button to open FCT's GitHub repo
 * Button to launch NVCP if possible
