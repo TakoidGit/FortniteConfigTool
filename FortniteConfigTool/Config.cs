@@ -21,9 +21,8 @@ namespace fct
 {
     class Config
     {
-        //variables
-
-        //triggers
+        
+        //"trigger" strings when reading config
         private readonly string triggerX = "ResolutionSizeX=";
         private readonly string triggerY = "ResolutionSizeY=";
         private readonly string triggerConfirmedX = "LastUserConfirmedResolutionSizeX=";
@@ -37,7 +36,7 @@ namespace fct
         private FileInfo backupDir = new FileInfo(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\FortniteGame\Saved\Config\WindowsClient\GameUserSettings.old");
         private FileInfo configDir = new FileInfo(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\FortniteGame\Saved\Config\WindowsClient\GameUserSettings.ini");
 
-        //get/set methods
+        //variables
         private int lineNumX;
         private int lineNumY;
         private int lineNumConfirmedX;
@@ -88,17 +87,15 @@ namespace fct
         //constructor
         public Config()
         {
-            //read the config when a new config is constructed
+            //read config upon construction
             ReadConfig();
-        }
-
-        //get and set methods        
+        }     
 
         //read the config
         public void ReadConfig()
         {
 
-            //store each line in string array currentconfig
+            //store each line in string array 'CurrentConfig'
             CurrentConfig = System.IO.File.ReadAllLines(configDir.ToString());
 
             //create new linecounter set to 0
@@ -110,9 +107,9 @@ namespace fct
                 //if the line starts with a trigger
                 if (currentLine.StartsWith(triggerX))
                 {
-                    //set currentresx to the line minus trigger
+                    //set CurrentResX to the line minus trigger
                     CurrentResX = currentLine.Replace(triggerX, "");
-                    //store line index value
+                    //store this line number
                     LineNumX = lineCounter;
                 }
                 if (currentLine.StartsWith(triggerY))
@@ -120,6 +117,7 @@ namespace fct
                     CurrentResY = currentLine.Replace(triggerY, "");
                     LineNumY = lineCounter;
                 }
+                //only the line number is needed for these lines since data is repeated
                 if (currentLine.StartsWith(triggerConfirmedX))
                 {
                     LineNumConfirmedX = lineCounter;
@@ -128,12 +126,21 @@ namespace fct
                 {
                     LineNumConfirmedY = lineCounter;
                 }
+                if (currentLine.StartsWith(triggerConfirmedFullscreen))
+                {
+                    LineNumConfirmedFullscreen = lineCounter;
+                }
+                if (currentLine.StartsWith(triggerFullscreen))
+                {
+                    LineNumFullscreen = lineCounter;
+                }
+                //FPS and Fullscreen lines both set booleans
                 if (currentLine.StartsWith(triggerFPS))
                 {
                     CurrentFPS = currentLine.Replace(triggerFPS, "");
                     LineNumFPS = lineCounter;
 
-                    //set fps bool
+                    //set IsFPSUnlimittted bool
                     if (CurrentFPS.StartsWith("0"))
                     {
                         IsFPSUnlimittted = true;
@@ -159,25 +166,21 @@ namespace fct
                         IsFullscreen = false;
                     }
                 }
-                if (currentLine.StartsWith(triggerConfirmedFullscreen))
-                {
-                    LineNumConfirmedFullscreen = lineCounter;
-                }
-                if (currentLine.StartsWith(triggerFullscreen))
-                {
-                    LineNumFullscreen = lineCounter;
-                }
                 //increment line counter after each loop
                 lineCounter++;
             }
+            //end loop
         }
 
         //convert array of strings to config's format
         private string FormatConfig(string[] unformattedConfig)
         {
+            //create StringBuilder to store each line in unformattedConfig
             StringBuilder formattedConfigSB = new StringBuilder();
+            //loop through each line in the unformattedConfig
             foreach (string currentLine in unformattedConfig)
             {
+                //add the line to formattedConfigSB
                 formattedConfigSB.Append(currentLine + Environment.NewLine);
             }
             string formattedConfig = formattedConfigSB.ToString();
@@ -187,13 +190,19 @@ namespace fct
         //write config
         public void WriteConfig()
         {
-            //write new config
+            //check if config is 'read-only'
             if (configDir.IsReadOnly)
             {
+                //remember it was
                 wasReadOnly = true;
+                //remove 'read-only'
                 configDir.IsReadOnly = false;
             }
+
+            //write config to file
             File.WriteAllText(configDir.ToString(), FormatConfig(NewConfig));
+
+            //return 'read-only' status if needed
             if (wasReadOnly)
             {
                 configDir.IsReadOnly = true;
@@ -203,16 +212,18 @@ namespace fct
         public void ReplaceLines()
         {
             SuccessMessage = new StringBuilder();
-                
+            //create string to store CurrentConfig
             NewConfig = new string[CurrentConfig.Length];
+            //copy CurrentConfig to NewConfig
             CurrentConfig.CopyTo(NewConfig, 0);
 
-            //replace lines at linenum index with their updated values
+            //replace lines at LineNum index with their new values
             NewConfig[LineNumX] = triggerX + NewX;
             NewConfig[LineNumY] = triggerY + NewY;
             NewConfig[LineNumConfirmedX] = triggerConfirmedX + NewX;
             NewConfig[LineNumConfirmedY] = triggerConfirmedY + NewY;
 
+            //append new line info to SuccessMessage
             SuccessMessage.Append("Resolution: " + NewX + "x" + NewY);            
 
             if (IsFPSUnlimittted)
@@ -243,9 +254,9 @@ namespace fct
 
         }
 
+        //backup CurrentConfig
         public void CreateBackup()
         {
-            //write that backup
             File.WriteAllText(backupDir.ToString(), FormatConfig(CurrentConfig));
         }
     }

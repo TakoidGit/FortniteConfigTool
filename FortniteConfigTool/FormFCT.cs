@@ -28,8 +28,14 @@ namespace fct
             InitializeComponent();
         }
 
+        private void FCU_Load(object sender, EventArgs e)
+        {
+            InitForm();
+        }
+
         private void InitForm()
         {
+            //try to make a new Config and if any errors are thrown exit and alert user
             try
             {
                 config = new Config();
@@ -39,11 +45,10 @@ namespace fct
                 Console.WriteLine(ex);
                 //tell user something is broken
                 MessageBox.Show("Could not read config file" + Environment.NewLine + "Try loading Fortnite first", "Error", MessageBoxButtons.OK);
-                //exit
                 Application.Exit();
             }
 
-            //try settings current values
+            //try to show user's current settings
             try
             {
                 numericUpDownResX.Value = Decimal.Parse(config.CurrentResX);
@@ -71,10 +76,11 @@ namespace fct
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Issue displaying current settings" + Environment.NewLine + "Try loading Fortnite first", "Error", MessageBoxButtons.OK);
                 Console.WriteLine(ex);
             }
 
-            //try nvidia
+            //check if user has NVIDIA
             try
             {
                 //look for nvcp .exe and see if FNRC can access it
@@ -90,17 +96,14 @@ namespace fct
             }
         }
 
-        private void FCU_Load(object sender, EventArgs e)
-        {
-            InitForm();
-        }
-
+        //open config button
         private void buttonConfigDir_Click(object sender, EventArgs e)
         {
             //open config directory
             System.Diagnostics.Process.Start(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\FortniteGame\Saved\Config\WindowsClient");
         }
 
+        //save button
         private void buttonSave_Click(object sender, EventArgs e)
         {            
             if (checkBoxBackup.Checked)
@@ -127,6 +130,7 @@ namespace fct
                     
         }
 
+        //fullscreen checkbox
         private void checkBoxFullscreen_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxFullscreen.Checked)
@@ -143,6 +147,7 @@ namespace fct
             }
         }
 
+        //FPS limit checkbox
         private void checkBoxNoFPSLimit_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxNoFPSLimit.Checked)
@@ -157,11 +162,13 @@ namespace fct
             }
         }
 
+        //GitHub link
         private void buttonGitHub_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/TakoidGit/FortniteConfigTool/");
         }
 
+        //NVCP button
         private void buttonNVCP_Click(object sender, EventArgs e)
         {
             try
@@ -175,6 +182,7 @@ namespace fct
             }
         }
 
+        //backup checkbox
         private void checkBoxBackup_CheckedChanged(object sender, EventArgs e)
         {
 
