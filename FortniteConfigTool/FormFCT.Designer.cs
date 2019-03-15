@@ -292,9 +292,9 @@
             this.labelVersion.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVersion.Location = new System.Drawing.Point(0, 98);
             this.labelVersion.Name = "labelVersion";
-            this.labelVersion.Size = new System.Drawing.Size(40, 15);
+            this.labelVersion.Size = new System.Drawing.Size(50, 15);
             this.labelVersion.TabIndex = 0;
-            this.labelVersion.Text = "v1.0.4";
+            this.labelVersion.Text = "v1.0.4.1";
             this.toolTipFooter.SetToolTip(this.labelVersion, "Check GitHub for updates");
             // 
             // FormFCT
