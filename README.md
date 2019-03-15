@@ -1,16 +1,22 @@
 # Fortnite Config Tool
 
-![Fortnite Config Tool](https://i.imgur.com/Hied70y.png)
+![Fortnite Config Tool](https://i.imgur.com/Rkylkac.png)
 
-This is a simple tool to quickly and easily edit Fortnite's GameUserSettings.ini.
+This is a simple tool to quickly and easily edit Fortnite's GameUserSettings.ini. Fortnite's in-game options are quite limited which makes custom resolutions and specific FPS limits impossible to achieve.
 
 *You still have to configure the custom resolution on your PC. This can be done via NVIDIA/AMD Control Panel or by following along with this [YouTube tutorial](https://www.youtube.com/watch?v=YO4a-yV073o).*
 
+**Some scientists say stretching your Fortnite resolution can cause an increase in persperation while playing Fortnite.**
+
+**Please stay hydrated while you sweat.**
+
 ## Features
 
-* Lightweight (less than 250kb decompressed)
-* Set custom resolutions now possible via the in-game menu
+* Set custom resolutions not possible via the in-game menu
 * Set FPS limit to any value
+* Lightweight & Fast
+  * Less than 250kb decompressed
+  * Programmed in native C# with no unnecessary plugins/frameworks
 * Fullscreen toggle
   * Must be enabled to enter a custom resolution (custom resolutions do not work outside of fullscreen mode)
 * Uncapped FPS toggle
