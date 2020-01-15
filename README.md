@@ -30,12 +30,7 @@ This is a simple tool to quickly and easily edit Fortnite's GameUserSettings.ini
 * Button to open your config directory
 * Button to open FCT's GitHub repo
 * Button to launch NVCP if possible
-  * This button only applies to NVIDIA users
-  * If someone with an AMD GPU would like to help me make this button dynamic based on user's GPU, please add my Discord below
-  
-## Support
-
-* Discord: ```Takoid#3709```
+  * This button only works for NVIDIA users
 
 ## Download
 [Releases](https://github.com/TakoidGit/FortniteConfigTool/releases)
